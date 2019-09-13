@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 import netfilterqueue
+import scapy.all as scapy
 
 def process_packet(packet):
     # Prints packet payload
-    print(packet.get_payload)
+    scapy_packet = scapy.IP(packet.get_payload())
+    print(scapy_packet.show())
     # Drops the packet... cuts connection of target client
     packet.drop()
     # Intercept incoming packets and accept them instead of dropping them
