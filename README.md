@@ -13,6 +13,9 @@ Once done make sure you flush the iptables
 ### Install netfilterqueue
 pip install netfilterqueue
 
+### Install scapy
+pip install scapy
+
 ### Import netfilterqueue
 `import netfilterqueue`
 
