@@ -19,5 +19,15 @@ pip install scapy
 ### Import netfilterqueue
 `import netfilterqueue`
 
+## Usage
+### Run dns spoofer
+`python dns_spoof.py`
+
+### Forward packet chain
+`iptables -I FORWARD -j NFQUEUE --queue-num 0`
+
+### Run arp_spoofer in separate window to become MITM
+`python arp_spoof.py`
+
 #### ToDo:
 - Upgrade to Python3
